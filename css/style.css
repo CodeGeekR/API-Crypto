@@ -1,5 +1,5 @@
 .background {
-    background-image: url(https://github.com/CodeGeekR/API-Crypto/blob/main/img/nature4.jpg?raw=true);
+    background-image: url('../img/nature4.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
