@@ -31,9 +31,15 @@ function crearCard(cripto) {
   const lastPriceColor = priceChange >= 0 ? 'text-success' : 'text-danger';
   const priceChangePercentColor = priceChangePercent >= 0 ? 'text-success' : 'text-danger';
 
+  // Verificar si el cambio porcentual es mayor que 3%
+  let alertClass = '';
+  if (Math.abs(priceChangePercent) > 3) {
+    alertClass = priceChangePercent >= 0 ? 'alert-change-positive' : 'alert-change-negative';
+  }
+
   return `
     <div class="col-md-4 mb-4">
-      <div class="card shadow-sm">
+      <div class="card shadow-sm ${alertClass}">
         <div class="card-body">
           <h5 class="card-title text-uppercase font-weight-bold">${cripto.symbol}</h5>
           <p class="card-text"><span class="font-weight-bold">Último precio:</span> <span class="${lastPriceColor}">$${lastPrice}</span></p>
@@ -63,6 +69,18 @@ document.getElementById("cargarDatos").addEventListener("click", async () => {
 
   // Oculta la barra de carga cuando los datos se han cargado
   loadingBar.style.display = 'none';
+
+  // Actualiza los datos cada segundo
+  setInterval(async () => {
+    // Muestra la barra de carga
+    loadingBar.style.display = 'block';
+
+    // Llama a la función cargarDatos
+    await cargarDatos();
+
+    // Oculta la barra de carga cuando los datos se han cargado
+    loadingBar.style.display = 'none';
+  }, 180000); // Se actualiza cada 3 minutos
 });
 
 // Función principal para cargar los datos y mostrarlos en cards

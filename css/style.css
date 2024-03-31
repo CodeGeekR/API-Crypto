@@ -78,3 +78,37 @@ h1 {
     transform: rotate(405deg);
   }
 }
+
+/* Animacion en el border de los cards cuando el porcentaje es mayor a 3% */
+
+.alert-change-positive {
+  border: 3px solid rgb(11, 155, 11);
+  animation: alert-change-positive 2s infinite;
+}
+
+.alert-change-negative {
+  border: 3px solid red;
+  animation: alert-change-negative 2s infinite;
+}
+
+@keyframes alert-change-positive {
+  0%, 100% { 
+    transform: scale(1); 
+    box-shadow: none;
+  }
+  50% { 
+    transform: scale(1.05); 
+    box-shadow: 0 0 10px 5px rgb(11, 155, 11);
+  }
+}
+
+@keyframes alert-change-negative {
+  0%, 100% { 
+    transform: scale(1); 
+    box-shadow: none;
+  }
+  50% { 
+    transform: scale(1.05); 
+    box-shadow: 0 0 10px 5px red;
+  }
+}
