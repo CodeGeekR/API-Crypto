@@ -11,20 +11,6 @@
     z-index: -1;
 }
 
-/* Background animado en css ideal para un e-Commerce, sin usar imagenes, ni urls*/
-.backgroundCommerce {
-    background: linear-gradient(90deg, #0E1822 0%, #0E1822 50%, #FF4655 50%, #FF4655 100%);
-    background-size: 200%;
-    background-position: 200%;
-    animation: background 10s ease-in-out infinite;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; 
-}
-
     
 
 /* Estilos para el título h1 */
@@ -34,359 +20,61 @@ h1 {
     text-align: center; /* Centrar el texto */
   }
 
-/*   .btn-warning {
-    color: #352808;
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
- */
-/*Estilos para el botón */
-/* .btn-warning {
-    color: #352808;
-    font-size: 0.9rem;
-    font-weight: 500;
-    animation: pulse 1s infinite;
-} */
-  
-    
 
-  
-/* Animación de pulso */
-/* @keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  } */
+/* Estilos para el Boton Loading */
 
-/*   .btn-warning.paused {
-    animation-play-state: paused;
-} */
-
-  /* Detener animación al pasar el cursor del mouse */
-/*   .btn-warning:hover {
-    animation-play-state: paused;
-  } */
-
-
-
-#mensaje {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Cambiar la fuente */
-    color: hsl(53, 33%, 5%); /* Color del texto */
-    text-align: center;
-    font-size: 0.9rem;
-    font-weight: 500; /* Centrar el texto */
-  }
-
-  /* Estilos para el botón */
-
-/*Animacion de elevacion para las card cuando se pasa el mouse por encima */
-
-.card-hover:hover {
-  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/*Boton animado COMPRAR*/
-.primary-button {
-  font-family: 'Ropa Sans', sans-serif;
-     /* font-family: 'Valorant', sans-serif; */
-  color: white;
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 0.05rem;
-  border: 1px solid #0E1822;
-  padding: 0.8rem 2.1rem;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 531.28 200'%3E%3Cdefs%3E%3Cstyle%3E .shape %7B fill: %23FF4655 /* fill: %230E1822; */ %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='shape' points='415.81 200 0 200 115.47 0 531.28 0 415.81 200' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
-  background-color: #0E1822;
-  background-size: 200%;
-  background-position: 200%;
-  background-repeat: no-repeat;
-  transition: 0.3s ease-in-out;
-  transition-property: background-position, border, color;
-  position: relative;
-  z-index: 1;
- }
- 
- .primary-button:hover {
-  border: 1px solid #FF4655;
-  color: white;
-  background-position: 40%;
- }
- 
- .primary-button:before {
-  content: "";
+.loading-bar {
+  /* centro objeto en la mitad de la pagina*/
   position: absolute;
-  background-color: #0E1822;
-  width: 0.2rem;
-  height: 0.2rem;
-  top: -1px;
-  left: -1px;
-  transition: background-color 0.15s ease-in-out;
- }
- 
- .primary-button:hover:before {
-  background-color: white;
- }
- 
- .primary-button:hover:after {
-  background-color: white;
- }
- 
- .primary-button:after {
-  content: "";
-  position: absolute;
-  background-color: #FF4655;
-  width: 0.3rem;
-  height: 0.3rem;
-  bottom: -1px;
-  right: -1px;
-  transition: background-color 0.15s ease-in-out;
- }
- 
- .button-borders {
-  position: relative;
-  width: fit-content;
-  height: fit-content;
- }
- 
- .button-borders:before {
-  content: "";
-  position: absolute;
-  width: calc(100% + 0.5em);
-  height: 50%;
-  left: -0.3em;
-  top: -0.3em;
-  border: 1px solid #0E1822;
-  border-bottom: 0px;
-     /* opacity: 0.3; */
- }
- 
- .button-borders:after {
-  content: "";
-  position: absolute;
-  width: calc(100% + 0.5em);
-  height: 50%;
-  left: -0.3em;
-  bottom: -0.3em;
-  border: 1px solid #0E1822;
-  border-top: 0px;
-     /* opacity: 0.3; */
-  z-index: 0;
- }
- 
- .shape {
-  fill: #0E1822;
- }
- 
-
- /* Estilos para el formulario de registro */
-
- .form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 350px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 20px;
-  position: relative;
-  margin: 0 auto;
-}
-
-.title {
-  font-size: 28px;
-  color: #00BBA1;
-  font-weight: 600;
-  letter-spacing: -1px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-left: 30px;
-}
-
-.title::before,.title::after {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+  height: 110px;
+  background: transparent;
+  border: px solid #3c3c3c;
   border-radius: 50%;
-  left: 0px;
-  background-color: #00BBA1;
-}
-
-.title::before {
-  width: 18px;
-  height: 18px;
-  background-color: #00BBA1;
-}
-
-.title::after {
-  width: 18px;
-  height: 18px;
-  animation: pulse 1s linear infinite;
-}
-
-.message, .signin {
-  color: rgba(88, 87, 87, 0.822);
-  font-size: 14px;
-}
-
-.signin {
   text-align: center;
+  line-height: 111px;
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #fff000;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px #fff000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.signin a {
-  color: royalblue;
-}
-
-.signin a:hover {
-  text-decoration: underline #00BBA1;
-}
-
-.flex {
-  display: flex;
-  width: 100%;
-  gap: 6px;
-}
-
-.form label {
-  position: relative;
-}
-
-.form label .input {
-  width: 100%;
-  padding: 10px 10px 20px 10px;
-  outline: 0;
-  border: 1px solid rgba(105, 105, 105, 0.397);
-  border-radius: 10px;
-}
-
-.form label .input + span {
+.loading-bar:before {
+  content: "";
   position: absolute;
-  left: 10px;
-  top: 15px;
-  color: grey;
-  font-size: 0.9em;
-  cursor: text;
-  transition: 0.3s ease;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 5px solid #fff000;
+  border-right: 5px solid #fff000;
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
 }
 
-.form label .input:placeholder-shown + span {
-  top: 15px;
-  font-size: 0.9em;
-}
-
-.form label .input:focus + span,.form label .input:valid + span {
-  top: 30px;
-  font-size: 0.7em;
-  font-weight: 600;
-}
-
-.form label .input:valid + span {
-  color: green;
-}
-
-.submit {
-  border: none;
-  outline: none;
-  background-color: #00BBA1;
-  padding: 10px;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 16px;
-  transform: .3s ease;
-}
-
-.submit:hover {
-  background-color: rgb(56, 90, 194);
-}
-
-@keyframes pulse {
-  from {
-    transform: scale(0.9);
-    opacity: 1;
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
   }
 
-  to {
-    transform: scale(1.8);
-    opacity: 0;
+  100% {
+    transform: rotate(360deg);
   }
 }
 
-/* Estilos para el formulario de login*/
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
 
-.submit-start {
-  border: none;
-  outline: none;
-  background-color: #00BBA1;
-  padding: 10px;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 16px;
-  transform: .3s ease;
-  -webkit-transform: .3s ease;
-  -moz-transform: .3s ease;
-  -ms-transform: .3s ease;
-  -o-transform: .3s ease;
-}
-
-.submit-start:hover {
-  background-color: rgb(56, 90, 194);
-}
-
-.form-start {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 350px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 20px;
-  position: relative;
-  margin: 0 auto;
-}
-
-.form-start label {
-  position: relative;
-}
-
-.form-start label .input {
-  width: 100%;
-  padding: 10px 10px 20px 10px;
-  outline: 0;
-  border: 1px solid rgba(105, 105, 105, 0.397);
-  border-radius: 10px;
-}
-
-.form-start label .input + span {
-  position: absolute;
-  left: 10px;
-  top: 15px;
-  color: grey;
-  font-size: 0.9em;
-  cursor: text;
-  transition: 0.3s ease;
-}
-
-.form-start label .input:placeholder-shown + span {
-  top: 15px;
-  font-size: 0.9em;
-}
-
-.form-start label .input:focus + span,.form label .input:valid + span {
-  top: 30px;
-  font-size: 0.7em;
-  font-weight: 600;
-}
-
-.form-start label .input:valid + span {
-  color: green;
+  100% {
+    transform: rotate(405deg);
+  }
 }
